@@ -1,8 +1,10 @@
 <template>
-<p> {{this.countryList}}</p>
+<!--<p> {{this.countryList}}</p>-->
+  <country-list :countryList="countryList"></country-list>
 </template>
 
 <script>
+import CountryList from './components/CountryList';
 
 export default {
   name: 'app',
@@ -17,7 +19,7 @@ export default {
             .then(countries => this.countryList = countries)
   },
   components: {
-
+    'country-list': CountryList
   }
 }
 </script>
